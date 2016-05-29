@@ -34,13 +34,15 @@
         android:id="@+id/btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select1" />
+        android:text="@string/select1"
+        android:onClick="GoToTidSelect" />
 
     <Button
         android:id="@+id/btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select2" />
+        android:text="@string/select2" 
+        android:onClick="GoToStationSelect"/>
          </TableRow>
 
 
@@ -55,13 +57,15 @@
         android:id="@+id/btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/select3" />
+        android:text="@string/select3"
+        android:onClick="GoToZZSelect" />
 
     <Button
         android:id="@+id/btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/method" />
+        android:text="@string/method"
+        android:onClick="GoToMethod" />
          </TableRow>
 
          <TableRow
@@ -73,13 +77,15 @@
         android:id="@+id/btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/about" />
+        android:text="@string/about" 
+        android:onClick="GoToAbout"/>
 
     <Button
         android:id="@+id/btn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/ours" />
+        android:text="@string/ours"
+        android:onClick="GoToOurs" />
          </TableRow>
      </TableLayout>
      

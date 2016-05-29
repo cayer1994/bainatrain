@@ -11,4 +11,9 @@
     <string name="method">附加功能</string>
     <string name="about">关于</string>
     <string name="ours">了解我们</string>
+    <string name="select">查询</string>
+    <string name="back">返回</string>
+    <string name="start">始发站</string>
+    <string name="stop">终点站</string>
+    <string name="transfer">中转站</string>
 </resources>
