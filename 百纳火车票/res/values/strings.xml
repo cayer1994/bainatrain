@@ -4,5 +4,11 @@
     <string name="app_name">Sample_2</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
-
+    <string name="title">百纳火车票信息查询系统</string>
+    <string name="select1">车次查询</string>
+    <string name="select2">车站查询</string>
+    <string name="select3">站站查询</string>
+    <string name="method">附加功能</string>
+    <string name="about">关于</string>
+    <string name="ours">了解我们</string>
 </resources>
