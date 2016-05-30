@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/tv1"
+        android:id="@+id/tid_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -13,7 +13,7 @@
         android:text="@string/select1" />
 
     <TextView
-        android:id="@+id/tv2"
+        android:id="@+id/tid_tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
@@ -22,37 +22,34 @@
         android:layout_marginTop="30dp"
         android:text="@string/select1" />
 
-    <Button
-        android:id="@+id/button1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="30dp"
-        android:text="@string/select"
-        android:onClick="TidSelect" />
-
     <EditText
-        android:id="@+id/editText1"
+        android:id="@+id/tid_et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/tv2"
-        android:layout_below="@+id/tv2"
-        android:layout_marginTop="14dp"
+        android:layout_alignLeft="@+id/tid_tv2"
+        android:layout_below="@+id/tid_tv2"
+        android:layout_marginTop="20dp"
         android:ems="10"
-        android:inputType="number" >
-
-        <requestFocus />
-    </EditText>
+        android:inputType="number" />
 
     <Button
-        android:id="@+id/btnback"
+        android:id="@+id/tid_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignTop="@+id/button1"
-        android:layout_marginLeft="22dp"
-        android:layout_toRightOf="@+id/tv1"
-        android:text="@string/back"
-        android:onClick="GoBack" />
+        android:layout_alignLeft="@+id/tid_et1"
+        android:layout_below="@+id/tid_et1"
+        android:layout_marginTop="46dp"
+        android:onClick="TidSelect"
+        android:text="@string/select" />
+
+    <Button
+        android:id="@+id/tid_btnback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/tid_btn1"
+        android:layout_alignBottom="@+id/tid_btn1"
+        android:layout_alignRight="@+id/tid_tv1"
+        android:onClick="GoBack"
+        android:text="@string/back" />
 
 </RelativeLayout>

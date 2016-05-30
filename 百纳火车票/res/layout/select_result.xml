@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <TextView
+        android:id="@+id/result_tv1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tid" />
+
+    <TextView
+        android:id="@+id/result_tv2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv1"
+        android:text="@string/name" />
+
+    <TextView
+        android:id="@+id/result_tv3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv2"
+        android:text="@string/type" />
+
+    <TextView
+        android:id="@+id/result_tv4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv3"
+        android:text="@string/startstation" />
+
+    <TextView
+        android:id="@+id/result_tv5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv4"
+        android:text="@string/terminus" />
+
+
+
+    <TextView
+        android:id="@+id/result_tv7"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv5"
+        android:text="@string/beginstation" />
+    <TextView
+        android:id="@+id/result_tv8"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv7"
+        android:text="@string/begintime" />
+     <TextView
+        android:id="@+id/result_tv9"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv8"
+        android:text="@string/stopstation" />
+      <TextView
+        android:id="@+id/result_tv10"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_toRightOf="@+id/result_tv9"
+        android:text="@string/stoptime" />
+
+    <ListView
+        android:id="@+id/result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/result_tv1"
+        android:layout_alignParentLeft="true"
+         >
+    </ListView>
+
+    <Button
+        android:id="@+id/result_btback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:onClick="GoBack"
+        android:layout_toRightOf="@+id/result_tv10"
+        android:text="@string/back" />
+
+</RelativeLayout>

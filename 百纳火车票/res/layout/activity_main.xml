@@ -9,7 +9,7 @@
     tools:context="com.example.sample2.MainActivity" >
     
     <TextView
-        android:id="@+id/title1"
+        android:id="@+id/main_title1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
@@ -17,7 +17,7 @@
         android:text="@string/title" />
 
      <TableLayout
-         android:id="@+id/tl1"
+         android:id="@+id/main_tl1"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
          android:layout_alignParentLeft="true"
@@ -25,20 +25,20 @@
          android:layout_marginTop="30dp" >
 
          <TableRow
-             android:id="@+id/tableRow1"
+             android:id="@+id/main_tableRow1"
              android:layout_marginTop="10dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content" >
              
               <Button
-        android:id="@+id/btn1"
+        android:id="@+id/main_btn1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select1"
         android:onClick="GoToTidSelect" />
 
     <Button
-        android:id="@+id/btn2"
+        android:id="@+id/main_btn2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select2" 
@@ -48,20 +48,20 @@
 
 
          <TableRow
-             android:id="@+id/tableRow2"
+             android:id="@+id/main_tableRow2"
              android:layout_marginTop="10dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content" >
     
                <Button
-        android:id="@+id/btn3"
+        android:id="@+id/main_btn3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/select3"
         android:onClick="GoToZZSelect" />
 
     <Button
-        android:id="@+id/btn4"
+        android:id="@+id/main_btn4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/method"
@@ -69,37 +69,32 @@
          </TableRow>
 
          <TableRow
-             android:id="@+id/tableRow3"
+             android:id="@+id/main_tableRow3"
              android:layout_marginTop="10dp"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content" >
      <Button
-        android:id="@+id/btn5"
+        android:id="@+id/main_btn5"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/about" 
         android:onClick="GoToAbout"/>
 
     <Button
-        android:id="@+id/btn6"
+        android:id="@+id/main_btn6"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/ours"
         android:onClick="GoToOurs" />
          </TableRow>
      </TableLayout>
-     
-     
+
     <ImageView
         android:id="@+id/pucture"
         android:layout_width="100dp"
         android:layout_height="120dp"
-        android:layout_marginTop="30dp"
-        android:layout_toRightOf="@+id/tl1"
-        android:layout_below="@+id/title1"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/main_tl1"
         android:src="@drawable/ic_launcher" />
-     
-
-   
     
 </RelativeLayout>

@@ -16,4 +16,13 @@
     <string name="start">始发站</string>
     <string name="stop">终点站</string>
     <string name="transfer">中转站</string>
+    <string name="tid">车次</string>
+    <string name="name">列车名</string>
+    <string name="type">列车类型</string>
+    <string name="startstation">始发站</string>
+    <string name="terminus">终点站</string>
+    <string name="beginstation">乘车起点</string>
+    <string name="begintime">发车时间</string>
+    <string name="stopstation">乘车终点</string>
+    <string name="stoptime">到站时间</string>
 </resources>

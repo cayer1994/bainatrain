@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+
+    <TextView
+        android:id="@+id/item_tv1"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/tid" />
+
+    <TextView
+        android:id="@+id/item_tv2"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:text="@string/name" />
+
+    <TextView
+        android:id="@+id/item_tv3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/type" />
+
+    <TextView
+        android:id="@+id/item_tv4"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/startstation" />
+
+    <TextView
+        android:id="@+id/item_tv5"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:text="@string/terminus" />
+
+    <TextView
+        android:id="@+id/item_tv6"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/beginstation" />
+
+
+    <TextView
+        android:id="@+id/item_tv8"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/begintime" />
+     <TextView
+        android:id="@+id/item_tv9"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stopstation" />
+      <TextView
+        android:id="@+id/item_tv10"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:text="@string/stoptime" />
+
+</LinearLayout>
