@@ -6,13 +6,18 @@ import java.util.List;
 import android.annotation.SuppressLint;
 import android.annotation.TargetApi;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.AliasActivity;
+import android.app.Dialog;
+import android.app.Notification.Action.Builder;
+import android.content.DialogInterface;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
+import android.widget.CheckBox;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
@@ -70,6 +75,7 @@ public class MainActivity extends Activity {
 		lv.setAdapter(sa);	
 	}
 	
+	//车站查询
 	public void StationSelect(View v)
 	{
 		EditText ed=(EditText)findViewById(R.id.station_ed1);
@@ -85,7 +91,72 @@ public class MainActivity extends Activity {
 		
 	}
 	
+	//站站查询
+	public void ZZSelect(View v)
+	{
+		vml.clear();
+		EditText et1=(EditText)findViewById(R.id.zz_et1);
+		EditText et2=(EditText)findViewById(R.id.zz_et2);
+		EditText et3=(EditText)findViewById(R.id.zz_et3);
+		CheckBox cb=(CheckBox)findViewById(R.id.zz_cb1);
+		if(cb.isChecked())
+		{
+			String start=et1.getText().toString().trim();
+			String transfer=et2.getText().toString().trim();
+			String stop=et3.getText().toString().trim();
+			try{
+			vml=dbm.Transfer(start, transfer, stop);
+			}catch(Exception e)
+			{
+				
+			}
+		}
+		else
+		{
+			String start=et1.getText().toString().trim();
+			String stop=et3.getText().toString().trim();
+			try{
+			vml=dbm.SSSelect(start, stop);
+			}catch(Exception e)
+			{
+				
+			}
+		}
+		this.convert();
+		SimpleAdapter sa=new SimpleAdapter(this,data,R.layout.list_item,item,list_id);
+		setContentView(R.layout.select_result);
+		ListView lv=(ListView)findViewById(R.id.result);
+		lv.setAdapter(sa);
+	}
 	
+	
+	//切换到车站添加
+	public void GoAddStation(View v)
+	{
+		setContentView(R.layout.add_station);
+	}
+	
+	public void GoToMethod(View v)//切换到
+	{
+		setContentView(R.layout.method);
+	}
+	
+	public void AddStation(View v)
+	{
+		EditText et1=(EditText)findViewById(R.id.add_et1);
+		EditText et2=(EditText)findViewById(R.id.add_et2);
+		String name=et1.getText().toString().trim();
+		String shorted=et2.getText().toString().trim();
+		boolean flag=dbm.InsertStation(name, shorted);
+		android.app.AlertDialog.Builder b=new AlertDialog.Builder(this);
+	   if(flag)
+		   b.setMessage("添加成功！");
+	   else
+		   b.setMessage("添加失败！");
+	   b.create().show();
+		
+		
+	}
 	
 	
 	//辅助功能：将vml转换为data，方便存入ListView中
@@ -107,5 +178,8 @@ public class MainActivity extends Activity {
 			data.add(hm);
 		}
 	}
+	
+	
+
 }
 

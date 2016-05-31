@@ -12,49 +12,59 @@
         android:layout_marginTop="20dp"
         android:text="@string/select3" />
 
+    <Button
+        android:id="@+id/zz_btback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zz_bt1"
+        android:layout_alignBottom="@+id/zz_bt1"
+        android:layout_alignRight="@+id/zz_et3"
+        android:onClick="GoBack"
+        android:text="@string/back" />
+
     <TextView
         android:id="@+id/zz_tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1"
-        android:layout_marginLeft="32dp"
-        android:layout_marginTop="30dp"
+        android:layout_alignRight="@+id/zz_bt1"
+        android:layout_below="@+id/zz_tv1"
+        android:layout_marginTop="17dp"
         android:text="@string/start" />
-
-    <CheckBox
-        android:id="@+id/zz_cb1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/textView3"
-        android:layout_alignBottom="@+id/textView3"
-        android:layout_alignRight="@+id/editText2"
-        android:text="CheckBox" />
 
     <EditText
         android:id="@+id/zz_et1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView2"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="22dp"
+        android:layout_alignLeft="@+id/zz_tv2"
+        android:layout_below="@+id/zz_tv2"
+        android:layout_marginTop="21dp"
         android:ems="10" />
 
     <TextView
         android:id="@+id/zz_yv3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText1"
-        android:layout_below="@+id/editText1"
-        android:layout_marginTop="28dp"
+        android:layout_alignLeft="@+id/zz_et1"
+        android:layout_below="@+id/zz_et1"
+        android:layout_marginTop="40dp"
+        android:text="@string/transfer" />
+
+    <CheckBox
+        android:id="@+id/zz_cb1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/zz_yv3"
+        android:layout_alignBottom="@+id/zz_yv3"
+        android:layout_alignLeft="@+id/zz_tv1"
         android:text="@string/transfer" />
 
     <EditText
         android:id="@+id/zz_et2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView3"
-        android:layout_centerVertical="true"
+        android:layout_alignLeft="@+id/zz_yv3"
+        android:layout_below="@+id/zz_cb1"
+        android:layout_marginTop="33dp"
         android:ems="10" >
 
         <requestFocus />
@@ -64,8 +74,9 @@
         android:id="@+id/zz_tv4"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText2"
-        android:layout_below="@+id/editText2"
+        android:layout_alignLeft="@+id/zz_et2"
+        android:layout_below="@+id/zz_et2"
+        android:layout_marginLeft="16dp"
         android:layout_marginTop="33dp"
         android:text="@string/stop" />
 
@@ -73,28 +84,19 @@
         android:id="@+id/zz_et3"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textView4"
-        android:layout_below="@+id/textView4"
-        android:layout_marginTop="26dp"
+        android:layout_alignLeft="@+id/zz_et2"
+        android:layout_below="@+id/zz_tv4"
+        android:layout_marginTop="24dp"
         android:ems="10" />
 
     <Button
         android:id="@+id/zz_bt1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/editText3"
         android:layout_alignParentBottom="true"
-        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="16dp"
+        android:onClick="ZZSelect"
         android:text="@string/select" />
-
-    <Button
-        android:id="@+id/zz_btback"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/button1"
-        android:layout_alignBottom="@+id/button1"
-        android:layout_alignRight="@+id/editText3"
-        android:text="@string/back"
-        android:onClick="GoBack" />
 
 </RelativeLayout>

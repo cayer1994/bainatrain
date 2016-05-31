@@ -25,4 +25,10 @@
     <string name="begintime">发车时间</string>
     <string name="stopstation">乘车终点</string>
     <string name="stoptime">到站时间</string>
+    <string name="addTid">列车添加</string>
+    <string name="addStation">车站添加</string>
+    <string name="addrelative">关系添加</string>
+    <string name="station">车站名</string>
+    <string name="shorted">简称</string>
+    <string name="add">添加</string>
 </resources>
