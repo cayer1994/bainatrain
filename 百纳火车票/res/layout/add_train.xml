@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <TextView
+        android:id="@+id/train_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="22dp"
+        android:layout_marginTop="26dp"
+        android:text="@string/tid" />
+
+    <TextView
+        android:id="@+id/train_tv2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/train_tv1"
+        android:layout_below="@+id/train_et1"
+        android:layout_marginTop="27dp"
+        android:text="@string/start" />
+
+    <TextView
+        android:id="@+id/train_tv3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/train_tv2"
+        android:layout_below="@+id/train_et2"
+        android:layout_marginTop="26dp"
+        android:text="@string/stop" />
+
+    <TextView
+        android:id="@+id/train_tv4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/train_tv3"
+        android:layout_below="@+id/train_tv3"
+        android:layout_marginTop="32dp"
+        android:text="@string/begintime" />
+
+    <EditText
+        android:id="@+id/train_et1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_tv1"
+        android:layout_alignBottom="@+id/train_tv1"
+        android:layout_toRightOf="@+id/train_tv4"
+        android:ems="10"
+        android:inputType="number" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/train_et2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_tv2"
+        android:layout_alignBottom="@+id/train_tv2"
+        android:layout_alignLeft="@+id/train_et1"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/train_et3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_tv3"
+        android:layout_alignBottom="@+id/train_tv3"
+        android:layout_alignLeft="@+id/train_et2"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/train_bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_bt1"
+        android:layout_alignBottom="@+id/train_bt1"
+        android:layout_alignRight="@+id/train_et3"
+        android:layout_marginRight="48dp"
+        android:onClick="GoToMethod"
+        android:text="@string/back" />
+
+    <Button
+        android:id="@+id/train_bt1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="16dp"
+        android:layout_toRightOf="@+id/train_tv1"
+        android:onClick="AddTrain"
+        android:text="@string/add" />
+
+    <EditText
+        android:id="@+id/train_et4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_tv4"
+        android:layout_alignBottom="@+id/train_tv4"
+        android:layout_alignLeft="@+id/train_et3"
+        android:ems="10" />
+
+    <EditText
+        android:id="@+id/train_et5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/train_tv5"
+        android:layout_alignBottom="@+id/train_tv5"
+        android:layout_alignLeft="@+id/train_et4"
+        android:ems="10" />
+
+    <TextView
+        android:id="@+id/train_tv5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/train_et4"
+        android:layout_marginTop="80dp"
+        android:layout_toLeftOf="@+id/train_et5"
+        android:text="@string/stoptime" />
+
+    <Button
+        android:id="@+id/train_bt3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/train_et5"
+        android:layout_alignRight="@+id/train_bt1"
+        android:text="@string/timeformat" />
+
+    <Button
+        android:id="@+id/train_bt4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/train_bt3"
+        android:layout_below="@+id/train_et5"
+        android:layout_marginTop="16dp"
+        android:text="@string/timeformat" />
+
+</RelativeLayout>

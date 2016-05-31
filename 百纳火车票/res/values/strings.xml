@@ -31,4 +31,7 @@
     <string name="station">车站名</string>
     <string name="shorted">简称</string>
     <string name="add">添加</string>
+    <string name="time">乘车时间</string>
+    <string name="timeformat">时间格式</string>
+    
 </resources>

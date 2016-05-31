@@ -136,11 +136,12 @@ public class MainActivity extends Activity {
 		setContentView(R.layout.add_station);
 	}
 	
-	public void GoToMethod(View v)//切换到
+	public void GoToMethod(View v)//切换到功能页面
 	{
 		setContentView(R.layout.method);
 	}
 	
+	//车站添加
 	public void AddStation(View v)
 	{
 		EditText et1=(EditText)findViewById(R.id.add_et1);
@@ -153,8 +154,20 @@ public class MainActivity extends Activity {
 		   b.setMessage("添加成功！");
 	   else
 		   b.setMessage("添加失败！");
-	   b.create().show();
+	   b.create().show();		
 		
+	}
+	
+	//切换到列车添加页面
+	public void GoAddTrain(View v)
+	{
+		setContentView(R.layout.add_train);
+		
+	}
+	
+	//列车添加
+	public void AddTrain(View v)
+	{
 		
 	}
 	
