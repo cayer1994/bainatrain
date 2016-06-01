@@ -277,9 +277,10 @@ public class DBMethod {
 			   vm.begintime=c.getString(1);
 			   vm.stopstation=arrive;
 			   vm.stoptime=c.getString(2);
-			   SimpleDateFormat sdf=new SimpleDateFormat("HH:mm");
-			   Time t=new Time(sdf.parse(vm.begintime).getTime());
-			   Time t2=new Time(sdf.parse(vm.stoptime).getTime());
+			   SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd HH:mm");
+			   java.util.Date t=sdf.parse(vm.begintime);
+			   
+			   java.util.Date t2=sdf.parse(vm.stoptime);
 			   if(t.before(t2)){
 			   String id=c.getString(0);
 			   sql="select * from train where Tid=?";
@@ -320,9 +321,9 @@ public class DBMethod {
 			   vm.begintime=c.getString(1);
 			   vm.stopstation=stop;
 			   vm.stoptime=c.getString(2);
-			   SimpleDateFormat sdf=new SimpleDateFormat("HH:mm");
-			   Time t=new Time(sdf.parse(vm.begintime).getTime());
-			   Time t2=new Time(sdf.parse(vm.stoptime).getTime());
+			   SimpleDateFormat sdf=new SimpleDateFormat("yyyy-mm-dd HH:mm");
+			   java.util.Date t=sdf.parse(vm.begintime);
+			   java.util.Date t2=sdf.parse(vm.stoptime);
 			   if(t.before(t2)){
 			   sql="select * from train where Tid=?";
 			   s=new String[]{vm.id};

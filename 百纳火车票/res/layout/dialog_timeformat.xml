@@ -4,36 +4,56 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/timeformat_tv1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginTop="21dp"
-        android:text="TextView" />
-
-    <DatePicker
-        android:id="@+id/datePicker1"
-        android:layout_width="wrap_content"
-        android:layout_height="200dp"
-        android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView1" />
-
-    <TextView
         android:id="@+id/timeformat_tv2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
         android:layout_below="@+id/datePicker1"
         android:layout_marginTop="16dp"
-        android:text="TextView" />
+        android:text="@string/date" />
+
+    <Button
+        android:id="@+id/timeformat_bt1"
+        android:onClick="AddTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_marginBottom="18dp"
+        android:layout_marginLeft="25dp"
+        android:text="@string/add" />
 
     <TimePicker
         android:id="@+id/timePicker1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/button1"
+        android:layout_below="@+id/timeformat_tv2"
+        android:layout_marginTop="16dp" />
+
+    <TextView
+        android:id="@+id/timeformat_tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
         android:layout_alignParentLeft="true"
-        android:layout_below="@+id/textView2"
-        android:layout_marginTop="20dp" />
+        android:layout_alignParentTop="true"
+        android:text="@string/time" />
+
+    <DatePicker
+        android:id="@+id/datePicker1"
+        android:layout_width="wrap_content"
+        android:layout_height="200dp"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/timeformat_tv1" />
+
+    <Button
+        android:id="@+id/timefprmat_bt2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/timeformat_bt1"
+        android:layout_alignBottom="@+id/timeformat_bt1"
+        android:layout_alignRight="@+id/timePicker1"
+        android:onClick="GoBackAddTrain"
+        android:text="@string/back" />
 
 </RelativeLayout>

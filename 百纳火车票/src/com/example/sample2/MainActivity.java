@@ -18,15 +18,18 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.CheckBox;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.SimpleAdapter;
+import android.widget.TimePicker;
 
 
 
 
 public class MainActivity extends Activity {
 	DBMethod dbm;
+	int page=0;
 	List<ViewModel> vml=new ArrayList<ViewModel>();
 	List<HashMap<String,String>> data=new ArrayList<HashMap<String,String>>();
 	String[] item=new String[]{"Tid","name","type","startstation","terminus","beginstation","begintime","stopstation","stoptime"};
@@ -165,10 +168,58 @@ public class MainActivity extends Activity {
 		
 	}
 	
+	
+	//切换到时间添加页面
+	@SuppressLint("NewApi")
+	public void GoTimeFormat1(View v)
+	{
+		page=1;
+		setContentView(R.layout.dialog_timeformat);
+	}
+	
+	//切换到时间添加页面
+		public void GoTimeFormat2(View v)
+		{
+			page=2;
+			setContentView(R.layout.dialog_timeformat);
+		}
+		
+	//添加时间，切换到车站添加页面??
+		public void AddTime(View v)
+		{
+			DatePicker dp=(DatePicker)findViewById(R.id.datePicker1);
+			TimePicker tp=(TimePicker)findViewById(R.id.timePicker1);
+			String date=String.valueOf(dp.getYear())+"-"+String.valueOf(dp.getMonth())+"-"+String.valueOf(dp.getDayOfMonth());
+			String time=String.valueOf(tp.getCurrentHour())+":"+String.valueOf(tp.getCurrentMinute());
+			setContentView(R.layout.add_train);
+			
+			
+			
+		}
+		
+		//返回车站添加
+		public void GoBackAddTrain(View v)
+		{
+			setContentView(R.layout.add_train);
+		}
+	
 	//列车添加
 	public void AddTrain(View v)
 	{
-		
+		EditText et1=(EditText)findViewById(R.id.train_et1);
+		EditText et2=(EditText)findViewById(R.id.train_et2);
+		EditText et3=(EditText)findViewById(R.id.train_et3);
+		EditText et7=(EditText)findViewById(R.id.train_et6);
+		EditText et6=(EditText)findViewById(R.id.train_et7);
+		String tid=et1.getText().toString();
+		String type=et2.getText().toString();
+		String name=et3.getText().toString();
+		String start=et6.getText().toString();
+		String stop=et7.getText().toString();
+		String r=dbm.InsertTrain(tid, name, type, start, stop);
+		android.app.AlertDialog.Builder b=new AlertDialog.Builder(this);
+		b.setMessage(r);
+		b.create().show();
 	}
 	
 	
