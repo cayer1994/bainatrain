@@ -4,7 +4,7 @@
     android:layout_height="match_parent" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/relative_tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -17,20 +17,20 @@
         android:id="@+id/button1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/textView1"
+        android:layout_below="@+id/relative_tv1"
         android:layout_marginTop="26dp"
-        android:layout_toLeftOf="@+id/textView1"
+        android:layout_toLeftOf="@+id/relative_tv1"
         android:onClick="GoAddTrain"
         android:text="@string/addTid" />
 
     <Button
-        android:id="@+id/button2"
+        android:id="@+id/relative_bt2"
         android:onClick="GoAddStation"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button1"
         android:layout_alignBottom="@+id/button1"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/relative_tv1"
         android:text="@string/addStation" />
 
     <Button
@@ -40,6 +40,7 @@
         android:layout_alignLeft="@+id/button1"
         android:layout_below="@+id/button1"
         android:layout_marginTop="42dp"
+        android:onClick="GoAddRelative"
         android:text="@string/addrelative" />
 
     <Button
@@ -48,7 +49,7 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/button3"
         android:layout_alignBottom="@+id/button3"
-        android:layout_toRightOf="@+id/textView1"
+        android:layout_toRightOf="@+id/relative_tv1"
         android:onClick="GoBack"
         android:text="@string/back" />
 

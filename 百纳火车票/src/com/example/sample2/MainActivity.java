@@ -192,7 +192,16 @@ public class MainActivity extends Activity {
 			String date=String.valueOf(dp.getYear())+"-"+String.valueOf(dp.getMonth())+"-"+String.valueOf(dp.getDayOfMonth());
 			String time=String.valueOf(tp.getCurrentHour())+":"+String.valueOf(tp.getCurrentMinute());
 			setContentView(R.layout.add_train);
-			
+			if(page==1)
+			{
+				EditText et=(EditText)findViewById(R.id.relative_et3);
+				et.setText(date+"  "+time);
+			}
+			if(page==2)
+			{
+				EditText et=(EditText)findViewById(R.id.relative_et4);
+				et.setText(date+"  "+time);
+			}
 			
 			
 		}
